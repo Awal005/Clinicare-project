@@ -302,13 +302,9 @@ const userService = {
     if (userData.phone) {
       const phoneExists = await User.findOne({ phone: userData.phone });
       if (phoneExists) {
-<<<<<<< HEAD
-        return next(errorResponse("User with phone already exists", 400));
-=======
         return next(
           errorResponse("User with phone number already exists", 400)
         );
->>>>>>> ea763302ae43cde54ed240e6537ac84f91c59424
       }
     }
     for (const [key, value] of Object.entries(userData)) {
@@ -339,10 +335,6 @@ const userService = {
     if (user.role === "doctor") {
       await Doctor.findOneAndDelete({ userId });
     }
-<<<<<<< HEAD
-
-=======
->>>>>>> ea763302ae43cde54ed240e6537ac84f91c59424
     await user.deleteOne();
     return true;
   },
@@ -392,8 +384,6 @@ const userService = {
     };
   },
 
-<<<<<<< HEAD
-=======
   deleteAccountAdmins: async (userId, next) => {
     const user = await User.findById(userId);
     if (!user) {
@@ -437,7 +427,6 @@ const userService = {
     return updatedUser;
   },
 
->>>>>>> ea763302ae43cde54ed240e6537ac84f91c59424
   createUserAdmins: async (userData, next) => {
     const emailExists = await User.findOne({ email: userData.email });
     if (emailExists) {
@@ -456,25 +445,12 @@ const userService = {
     process.nextTick(() => {
       mailService.sendWelcomeMail(user, userData.password).catch(console.error);
     });
-<<<<<<< HEAD
-    if (user.role === "patient") {
-      const patient = await Patient.findOne({ userId });
-      const inpatient = await Inpatient.findOne({ patientId: patient });
-      if (inpatient) {
-        await inpatient.deleteOne();
-      }
-      await Patient.findOneAndDelete({ userId });
-    }
-    if (user.role === "doctor") {
-      await Doctor.findOneAndDelete({ userId });
-=======
     if (user.role === "doctor") {
       await Doctor.create({
         userId: user._id,
         availability: userData.availability,
         specialization: userData.specialization,
       });
->>>>>>> ea763302ae43cde54ed240e6537ac84f91c59424
     }
     if (!user) {
       return next(errorResponse("User registration failed"));

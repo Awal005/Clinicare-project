@@ -201,8 +201,6 @@ export const updatePasswordSchema = z.object({
     }),
 });
 
-<<<<<<< HEAD
-=======
 export const validateUpdateUserRoleSchema = z.object({
   role: z
     .enum(["staff", "doctor", "admin", "nurse", "patient"])
@@ -211,7 +209,6 @@ export const validateUpdateUserRoleSchema = z.object({
     }),
 });
 
->>>>>>> ea763302ae43cde54ed240e6537ac84f91c59424
 export const validateRoomSchema = z.object({
   roomNumber: z.coerce
     .number()
@@ -247,17 +244,6 @@ export const validateRoomSchema = z.object({
     }),
 });
 
-<<<<<<< HEAD
-export const validateUpdateUserRoleSchema = z.object({
-  role: z
-    .enum(["staff", "doctor", "admin", "nurse", "patient"])
-    .refine((value) => value !== "", {
-      message: "Role is required",
-    }),
-});
-
-=======
->>>>>>> ea763302ae43cde54ed240e6537ac84f91c59424
 export const validateDoctorAvailabilitySchema = z.object({
   availability: z
     .enum(["available", "unavailable", "on leave", "sick"])
@@ -288,23 +274,6 @@ export const validateBookAppointmentSchema = z.object({
     }),
 });
 
-<<<<<<< HEAD
-export const validateConfirmAppointmentSchema = z.object({
-  doctorId: z.string().min(3, {
-    message: "Doctor is required",
-  }),
-  status: z
-    .enum(["scheduled", "confirmed", "cancelled"])
-    .refine((value) => value !== "", {
-      message: "Confirmation status is required",
-    }),
-  response: z.string().min(5, {
-    message: "Response must be at least 5 characters long",
-  }),
-});
-
-=======
->>>>>>> ea763302ae43cde54ed240e6537ac84f91c59424
 export const validateCreatePaymentSchema = z.object({
   patientId: z.string().min(3, {
     message: "Patient is required",
@@ -357,8 +326,6 @@ export const validateInpatientSchema = z.object({
     .refine((value) => value !== "", {
       message: "Status is required",
     }),
-<<<<<<< HEAD
-=======
 });
 
 export const validateConfirmAppointmentSchema = z.object({
@@ -373,5 +340,4 @@ export const validateConfirmAppointmentSchema = z.object({
   response: z.string().min(5, {
     message: "Notes must be at least 5 characters long",
   }),
->>>>>>> ea763302ae43cde54ed240e6537ac84f91c59424
 });

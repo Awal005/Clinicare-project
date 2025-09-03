@@ -77,10 +77,6 @@ const inpatientService = {
     await room.save();
     return inpatient;
   },
-<<<<<<< HEAD
-=======
-
->>>>>>> ea763302ae43cde54ed240e6537ac84f91c59424
   getAllInpatients: async (
     page = 1,
     limit = 10,
@@ -194,11 +190,7 @@ const inpatientService = {
       inpatients,
     };
   },
-<<<<<<< HEAD
-  updateInpatient: async (inpatientId, formData, next) => {
-=======
  updateInpatient: async (inpatientId, formData, next) => {
->>>>>>> ea763302ae43cde54ed240e6537ac84f91c59424
     const admissionDate = new Date(formData.admissionDate);
     const dischargeDate = new Date(formData.dischargeDate);
     const currentDate = new Date();
@@ -236,8 +228,4 @@ const inpatientService = {
   },
 };
 
-<<<<<<< HEAD
 export default inpatientService;
-=======
-export default inpatientService;
->>>>>>> ea763302ae43cde54ed240e6537ac84f91c59424
