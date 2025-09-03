@@ -158,16 +158,12 @@ export const getAllUsers = tryCatchFn(async (req, res, next) => {
     sort,
     next
   );
-<<<<<<< HEAD
-  return successResponse(res, responseData, "Users data fetched successfully", 200);
-=======
   return successResponse(
     res,
     responseData,
     "Users data fetched successfully",
     200
   );
->>>>>>> ea763302ae43cde54ed240e6537ac84f91c59424
 });
 
 export const deleteAccountAdmins = tryCatchFn(async (req, res, next) => {
@@ -189,11 +185,7 @@ export const updateUserRole = tryCatchFn(async (req, res, next) => {
 });
 
 export const createUserAdmins = tryCatchFn(async (req, res, next) => {
-<<<<<<< HEAD
-  const user = await userService.createUser(req.body, next);
-=======
   const user = await userService.createUserAdmins(req.body, next);
->>>>>>> ea763302ae43cde54ed240e6537ac84f91c59424
   if (!user) return;
   return successResponse(res, user.fullname, "User created successfully", 201);
 });

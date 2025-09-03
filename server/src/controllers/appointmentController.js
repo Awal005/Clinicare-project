@@ -106,8 +106,4 @@ export const confirmAppointment = tryCatchFn(async (req, res, next) => {
     "Appointment updated successfully",
     200
   );
-<<<<<<< HEAD
 });
-=======
-});
->>>>>>> ea763302ae43cde54ed240e6537ac84f91c59424

@@ -27,11 +27,7 @@ const appointmentSchema = new Schema(
     },
     notes: {
       type: String,
-<<<<<<< HEAD
-      maxLength: [255, "Notes cannot be more than 255 characters"],
-=======
       maxlength: [255, "Notes cannot be more than 255 characters"],
->>>>>>> ea763302ae43cde54ed240e6537ac84f91c59424
       required: [true, "Notes is required"],
     },
     response: {
@@ -51,8 +47,4 @@ appointmentSchema.index({ appointmentTime: 1 });
 const Appointment =
   mongoose.models.Appointment || model("Appointment", appointmentSchema);
 
-<<<<<<< HEAD
 export default Appointment;
-=======
-export default Appointment;
->>>>>>> ea763302ae43cde54ed240e6537ac84f91c59424

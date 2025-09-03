@@ -1,30 +1,4 @@
 import Room from "../models/room.js";
-<<<<<<< HEAD
-import responseHandler from "../utils/responseHandler.js";
-
-const {errorResponse, notFoundResponse} = responseHandler
-
-const roomService = {
-    createRoom: async(roomData, next)=> {
-        const roomExists = await Room.findOne({ roomNumber: roomData.roomNumber });
-        if(roomExists) {
-            return next(errorResponse("Room number already exists", 400));
-        }
-        const room = await Room.create({
-            ...roomData,
-        });
-        return room;
-    },
-    getRoomMeta: async ()=> {
-        const roomMeta = {
-            roomType,
-            roomStatus,
-            roomInfo,
-        };
-        return roomMeta;
-    },
-    getAllRooms: async (
-=======
 import { roomInfo, roomStatus, roomType } from "../utils/constant.js";
 import responseHandler from "../utils/responseHandler.js";
 
@@ -50,18 +24,13 @@ const roomService = {
   },
 
   getAllRooms: async (
->>>>>>> ea763302ae43cde54ed240e6537ac84f91c59424
     page = 1,
     limit = 10,
     query = "",
     roomType = "",
     roomStatus = "",
     next
-<<<<<<< HEAD
-    ) => {
-=======
   ) => {
->>>>>>> ea763302ae43cde54ed240e6537ac84f91c59424
     const sanitizeQuery = query.toLowerCase().replace(/[^\w+-]/gi, "");
     const [rooms, total] =
       sanitizeQuery || roomType || roomStatus
@@ -108,15 +77,9 @@ const roomService = {
       },
       rooms,
     };
-<<<<<<< HEAD
-    },
-
-    updateRoom: async (roomId, roomData, next) => {
-=======
   },
 
   updateRoom: async (roomId, roomData, next) => {
->>>>>>> ea763302ae43cde54ed240e6537ac84f91c59424
     const room = await Room.findById(roomId);
     if (!room) {
       return next(notFoundResponse("No room found"));
@@ -131,8 +94,4 @@ const roomService = {
   },
 };
 
-<<<<<<< HEAD
 export default roomService;
-=======
-export default roomService;
->>>>>>> ea763302ae43cde54ed240e6537ac84f91c59424

@@ -55,8 +55,4 @@ inpatientSchema.index({ dischargeDate: 1 });
 const Inpatient =
   mongoose.models.Inpatient || model("Inpatient", inpatientSchema);
 
-<<<<<<< HEAD
 export default Inpatient;
-=======
-export default Inpatient;
->>>>>>> ea763302ae43cde54ed240e6537ac84f91c59424

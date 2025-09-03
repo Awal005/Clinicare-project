@@ -73,11 +73,6 @@ const mailService = {
       html: htmlBody,
     });
   },
-<<<<<<< HEAD
-
-
-=======
->>>>>>> ea763302ae43cde54ed240e6537ac84f91c59424
 };
 
 

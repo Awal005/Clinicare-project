@@ -16,12 +16,8 @@ router.post(
   verifyAuth,
   authorizedRoles("admin"),
   validateFormData(validateInpatientSchema),
-<<<<<<< HEAD
-  clearCache("inpatients"), clearCache("rooms"),
-=======
   clearCache("inpatients"),
   clearCache("rooms"),
->>>>>>> ea763302ae43cde54ed240e6537ac84f91c59424
   register
 );
 
@@ -38,17 +34,9 @@ router.patch(
   verifyAuth,
   authorizedRoles("admin"),
   validateFormData(validateInpatientSchema),
-<<<<<<< HEAD
-  clearCache("inpatients"), clearCache("rooms"),
-  updateInpatient
-);
-
-export default router;
-=======
   clearCache("inpatients"),
   clearCache("rooms"),
   updateInpatient
 );
 
 export default router;
->>>>>>> ea763302ae43cde54ed240e6537ac84f91c59424

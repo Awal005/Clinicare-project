@@ -1,15 +1,9 @@
 import Appointment from "../models/appointment.js";
 import Patient from "../models/patient.js";
 import Payment from "../models/payment.js";
-<<<<<<< HEAD
-import responseHandler from "../utils/responseHandler.js";
-import mailService from "./email.service.js";
-import Room from "../models/room.js";
-=======
 import Room from "../models/room.js";
 import responseHandler from "../utils/responseHandler.js";
 import mailService from "./email.service.js";
->>>>>>> ea763302ae43cde54ed240e6537ac84f91c59424
 const { errorResponse, notFoundResponse } = responseHandler;
 
 const paymentService = {
@@ -53,10 +47,6 @@ const paymentService = {
     });
     return payment;
   },
-<<<<<<< HEAD
-=======
-
->>>>>>> ea763302ae43cde54ed240e6537ac84f91c59424
   getPatientPayments: async (
     page = 1,
     limit = 10,
@@ -279,8 +269,4 @@ const paymentService = {
   },
 };
 
-<<<<<<< HEAD
 export default paymentService;
-=======
-export default paymentService;
->>>>>>> ea763302ae43cde54ed240e6537ac84f91c59424

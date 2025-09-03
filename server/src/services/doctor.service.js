@@ -88,8 +88,4 @@ const doctorService = {
   },
 };
 
-<<<<<<< HEAD
 export default doctorService;
-=======
-export default doctorService;
->>>>>>> ea763302ae43cde54ed240e6537ac84f91c59424

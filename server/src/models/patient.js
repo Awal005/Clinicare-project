@@ -26,11 +26,8 @@ const patientSchema = new Schema(
     },
     phone: {
       type: String,
-<<<<<<< HEAD
-=======
       required: [true, "Phone number is required"],
       unique: true,
->>>>>>> ea763302ae43cde54ed240e6537ac84f91c59424
     },
     address: {
       type: String,

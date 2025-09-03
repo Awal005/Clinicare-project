@@ -1,20 +1,4 @@
 import tryCatchFn from "../utils/tryCatchFn.js";
-<<<<<<< HEAD
-import responseHandler from "../utils/responseHandler.js";
-import roomService from "../services/room.service.js";
-const { successResponse } = responseHandler;
-
-export const createRoom = tryCatchFn(async (req, res, next) => {
-    const room = await roomService.createRoom(req.body, next);
-    if (!room) return;
-    return successResponse(res, room, "Room created successfully", 201);
-});
-
-export const getRoomMeta = tryCatchFn(async (req, res, next) => {
-    const roomMeta = await roomService.getRoomMeta();
-    if (!roomMeta) return;
-    return successResponse(res, roomMeta, "Room meta fetched", 200);
-=======
 import roomService from "../services/room.service.js";
 import responseHandler from "../utils/responseHandler.js";
 
@@ -30,7 +14,6 @@ export const getRoomMeta = tryCatchFn(async (req, res, next) => {
   const roomMeta = await roomService.getRoomMeta();
   if (!roomMeta) return;
   return successResponse(res, roomMeta, "Room meta fetched", 200);
->>>>>>> ea763302ae43cde54ed240e6537ac84f91c59424
 });
 
 export const getAllRooms = tryCatchFn(async (req, res, next) => {
@@ -43,10 +26,6 @@ export const getAllRooms = tryCatchFn(async (req, res, next) => {
     roomStatus,
     next
   );
-<<<<<<< HEAD
-  if(!responseData) return
-=======
->>>>>>> ea763302ae43cde54ed240e6537ac84f91c59424
   return successResponse(
     res,
     responseData,

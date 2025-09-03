@@ -54,8 +54,4 @@ export const getAllPatients = tryCatchFn(async (req, res, next) => {
     "Patients data fetched successfully",
     200
   );
-<<<<<<< HEAD
 });
-=======
-});
->>>>>>> ea763302ae43cde54ed240e6537ac84f91c59424

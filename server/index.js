@@ -17,10 +17,6 @@ import appointmentRoutes from "./src/routes/appointmentRoutes.js";
 import paymentRoutes from "./src/routes/paymentRoutes.js";
 import inpatientRoutes from "./src/routes/inpatientRoutes.js";
 import dashboardRoutes from "./src/routes/dashboardRoutes.js";
-<<<<<<< HEAD
-=======
-
->>>>>>> ea763302ae43cde54ed240e6537ac84f91c59424
 //initialize express app
 const app = express();
 
@@ -71,15 +67,9 @@ app.use("/api/v1/auth", userRoutes);
 app.use("/api/v1/patients", patientRoutes);
 app.use("/api/v1/rooms", roomRoutes);
 app.use("/api/v1/doctors", doctorRoutes);
-<<<<<<< HEAD
-app.use("/api/v1/appointment", appointmentRoutes);
-app.use("/api/v1/payment", paymentRoutes);
-app.use("/api/v1/inpatient", inpatientRoutes);
-=======
 app.use("/api/v1/appointments", appointmentRoutes);
 app.use("/api/v1/payments", paymentRoutes);
 app.use("/api/v1/inpatients", inpatientRoutes);
->>>>>>> ea763302ae43cde54ed240e6537ac84f91c59424
 app.use("/api/v1/dashboard", dashboardRoutes);
 
 //handle route errors

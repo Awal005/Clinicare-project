@@ -149,11 +149,7 @@ export const passwordResetTemplate = (name, email, resetToken) => `
   </html>
   `;
 
-<<<<<<< HEAD
-  export const appointmentStatusTemplate = (name, status) => `
-=======
 export const appointmentStatusTemplate = (name, status) => `
->>>>>>> ea763302ae43cde54ed240e6537ac84f91c59424
   <!DOCTYPE html>
   <html>
   <head>
@@ -199,11 +195,7 @@ export const appointmentStatusTemplate = (name, status) => `
               }
           </div>
           <div class="footer">
-<<<<<<< HEAD
-              <p>© ${new Date().getFullYear()} Clinicare - Booking Center Clinic. All rights reserved.</p>
-=======
               <p>©️ ${new Date().getFullYear()} Clinicare - Booking Center Clinic. All rights reserved.</p>
->>>>>>> ea763302ae43cde54ed240e6537ac84f91c59424
           </div>
       </div>
   </body>
@@ -248,25 +240,16 @@ export const createPaymentTemplate = (name, amount, paymentType) => `
               <p>Thank you for using our service.</p>
           </div>
           <div class="footer">
-<<<<<<< HEAD
-              <p>© ${new Date().getFullYear()} Clinicare - Booking Center Clinic. All rights reserved.</p>
-=======
               <p>©️ ${new Date().getFullYear()} Clinicare - Booking Center Clinic. All rights reserved.</p>
->>>>>>> ea763302ae43cde54ed240e6537ac84f91c59424
           </div>
       </div>
   </body>
   </html>
   `;
 
-<<<<<<< HEAD
-export const paymentStatusTemplate = (name, amount, status) =>`
-    <!DOCTYPE html>
-=======
 export const paymentStatusTemplate = (name, amount, status) =>
   `
        <!DOCTYPE html>
->>>>>>> ea763302ae43cde54ed240e6537ac84f91c59424
     <html>
     <head>
           <style>
@@ -303,17 +286,9 @@ export const paymentStatusTemplate = (name, amount, status) =>
                 <p>Thank you for using our service.</p>
             </div>
             <div class="footer">
-<<<<<<< HEAD
-                <p>© ${new Date().getFullYear()} Clinicare - Booking Center Clinic. All rights reserved.</p>
-=======
                 <p>©️ ${new Date().getFullYear()} Clinicare - Booking Center Clinic. All rights reserved.</p>
->>>>>>> ea763302ae43cde54ed240e6537ac84f91c59424
             </div>
         </div>
     </body>
     </html>
-<<<<<<< HEAD
-    `;
-=======
       `;
->>>>>>> ea763302ae43cde54ed240e6537ac84f91c59424

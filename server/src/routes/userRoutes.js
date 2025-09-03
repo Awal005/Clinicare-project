@@ -13,15 +13,11 @@ import {
   uploadAvatar,
   updateUserPassword,
   updateUser,
-<<<<<<< HEAD
-  deleteAccount, createUserAdmins, updateUserRole, deleteAccountAdmins
-=======
   deleteAccount,
   getAllUsers,
   deleteAccountAdmins,
   updateUserRole,
   createUserAdmins,
->>>>>>> ea763302ae43cde54ed240e6537ac84f91c59424
 } from "../controllers/userController.js";
 import { validateFormData } from "../middlewares/validateForm.js";
 import {
@@ -32,18 +28,11 @@ import {
   validateResetPasswordSchema,
   updatePasswordSchema,
   validateUserSchema,
-<<<<<<< HEAD
-  validateUpdateUserRoleSchema
-} from "../utils/dataSchema.js";
-import { authorizedRoles, verifyAuth } from "../middlewares/authenticate.js";
-=======
   validateUpdateUserRoleSchema,
 } from "../utils/dataSchema.js";
 import { verifyAuth, authorizedRoles } from "../middlewares/authenticate.js";
->>>>>>> ea763302ae43cde54ed240e6537ac84f91c59424
 import { rateLimiter, refreshTokenLimit } from "../middlewares/rateLimit.js";
 import { cacheMiddleware, clearCache } from "../middlewares/cache.js";
-import { getAllUsers } from "../controllers/userController.js";
 
 const router = express.Router();
 
@@ -127,24 +116,12 @@ router.delete(
 );
 
 router.get(
-<<<<<<< HEAD
-  "/all", 
-  verifyAuth,
-  authorizedRoles("admin", "doctor", "nurse", "staff"), 
-  cacheMiddleware("users", 3600), 
-  getAllUsers
-);
-
-
-
-=======
   "/all",
   verifyAuth,
   cacheMiddleware("users", 3600),
   getAllUsers
 );
 
->>>>>>> ea763302ae43cde54ed240e6537ac84f91c59424
 router.delete(
   "/:id/delete-account",
   verifyAuth,
@@ -170,9 +147,4 @@ router.post(
   clearCache("users"),
   createUserAdmins
 );
-<<<<<<< HEAD
-
-
-=======
->>>>>>> ea763302ae43cde54ed240e6537ac84f91c59424
 export default router;

@@ -1,8 +1,4 @@
-<<<<<<< HEAD
-import { useState, useEffect } from "react";
-=======
 import { useEffect, useState } from "react";
->>>>>>> ea763302ae43cde54ed240e6537ac84f91c59424
 import { AuthContext } from ".";
 import { getAuthenticatedUser, refreshAccessToken } from "@/api/auth";
 import { useQuery } from "@tanstack/react-query";
@@ -12,10 +8,7 @@ export default function AuthProvider({ children }) {
   //set and save the accessToken to state memory.
   const [accessToken, setAccessToken] = useState(null);
   const [user, setUser] = useState(null); //default value of logged in user is null
-<<<<<<< HEAD
-=======
   // const [isAuthenticating, setIsAuthenticating] = useState(false);
->>>>>>> ea763302ae43cde54ed240e6537ac84f91c59424
 
   //Query to refresh accessToken on app start
   useQuery({
@@ -37,10 +30,7 @@ export default function AuthProvider({ children }) {
     retry: false, //don't run again if the queryFn fails.
   });
 
-<<<<<<< HEAD
   //fetch user data using useQuery
-=======
-  //fetch user data usng useQuery
   // useQuery({
   //   queryKey: ["auth_user"], //cache key for our api call.
   //   queryFn: async () => {
@@ -67,7 +57,6 @@ export default function AuthProvider({ children }) {
 
   //fetch user data usng useQuery
 
->>>>>>> ea763302ae43cde54ed240e6537ac84f91c59424
   const { isPending, data } = useQuery({
     queryKey: ["auth_user", accessToken],
     queryFn: () => getAuthenticatedUser(accessToken),
@@ -83,16 +72,8 @@ export default function AuthProvider({ children }) {
     }
   }, [data?.data?.data, data?.status]);
 
-<<<<<<< HEAD
-  
-  console.log(accessToken)
-
-  if (isPending && accessToken) {
-    return <LazyLoader/>
-=======
   if (isPending && accessToken) {
     return <LazyLoader />;
->>>>>>> ea763302ae43cde54ed240e6537ac84f91c59424
   }
  
 

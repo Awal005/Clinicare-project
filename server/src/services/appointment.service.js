@@ -340,8 +340,4 @@ const appointmentService = {
   },
 };
 
-<<<<<<< HEAD
 export default appointmentService;
-=======
-export default appointmentService;
->>>>>>> ea763302ae43cde54ed240e6537ac84f91c59424

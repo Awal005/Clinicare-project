@@ -11,9 +11,6 @@ import {
   deleteFromCloudinary,
   uploadToCloudinary,
 } from "../utils/cloudinary.js";
-import Patient from "../models/patient.js";
-import Doctor from "../models/doctor.js";
-import Inpatient from "../models/inpatient.js";
 
 const { errorResponse, notFoundResponse } = responseHandler;
 
